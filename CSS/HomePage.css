@@ -1,32 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-dark);
+}
+
 .header-nav {
-            background-color: white;
-            border-bottom: 1px solid #eee;
-        }
-        
+    background-color: white;
+    border-bottom: 1px solid #eee;
+}
+
 .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
 
-        .logo-img {
-            height: 40px; /* Adjust as needed */
-        }
+.logo-img {
+    height: 80px;
+}
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
 
-        .nav-links a {
-            padding: 10px 15px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
+.nav-links a {
+    padding: 20px 40px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
 
-        .nav-links a:hover {
-            color: var(--color-secondary);
-        }
+.nav-links a:hover {
+    color: var(--color-secondary);
+}
+
+/* Image Banner and CTA */
+/* --- 2. MAIN BANNER/IMAGE SECTION --- */
+.main-banner {
+    /* Use a placeholder image path or a large background color */
+    background-image: url('Images/ImageSlider1.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Set height for visual effect */
+    display: flex;
+    align-items: flex-end; /* Position text near the bottom */
+    padding: 30px 50px;
+    color: #ffffff;
+}
+
+.banner-text {
+    font-size: 28px;
+    font-weight: bold;
+    /* Use a subtle background for readability over the image */
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/* --- 3. INTRODUCTORY HEADER --- */
+.intro-header {
+    background-color: #57BC90; /* Green background */
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.intro-header h1 {
+    font-size: 24px;
+    color: #015249;
+    font-weight: 600;
+}
+
+/* --- 4. CALL-TO-ACTION CARDS SECTION --- */
+.cta-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 40px;
+    background-color: #ffffff;
+}
+
+.cta-card {
+    flex-basis: 400px; /* Set a max width for the cards */
+    background-color: #A5A5AF; /* Gray background for cards */
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cta-card h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #015249;
+}
+
+.cta-card p {
+    font-size: 14px;
+    color: #015249;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Button Styling */
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Primary Button (CONTACT US) */
+.primary-button {
+    background-color: #57BC90; 
+    color: #015249;
+}
+
+.primary-button:hover {
+    background-color: #77C9D4; 
+    color: #015249;
+}
+
+/* Secondary Button (VIEW PRODUCTS) */
+.secondary-button {
+    background-color: #57BC90;
+    color: #015249;
+}
+
+.secondary-button:hover {
+    background-color: #77C9D4;
+    color: #015249;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 900px) {
+    .cta-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-card {
+        flex-basis: 100%;
+        width: 90%;
+    }
+}
+
