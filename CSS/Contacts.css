@@ -15,7 +15,7 @@ body {
 a {
     text-decoration: none;
     color: var(--color-dark);
-}
+}   
   
 .header-nav {
     background-color: white;
@@ -38,6 +38,12 @@ a {
     display: flex;
     margin: 0;
     padding: 0;
+}
+
+.nav-links a {
+    padding: 20px 40px;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
