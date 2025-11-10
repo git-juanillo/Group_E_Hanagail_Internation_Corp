@@ -49,3 +49,54 @@ a {
 .nav-links a:hover {
     color: var(--color-secondary);
 }
+
+/* Header */
+.contact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #00695c, #004d40);
+  color: white;
+  padding: 40px 10%;
+}
+
+.header-text {
+  max-width: 50%;
+}
+
+.header-text h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.header-image .image-box {
+  background: #ccc;
+  width: 250px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Contact Info */
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 10%;
+  gap: 30px;
+}
+
+.info-card {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.info-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
