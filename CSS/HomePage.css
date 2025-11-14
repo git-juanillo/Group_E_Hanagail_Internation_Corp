@@ -2,58 +2,83 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: var(--color-dark);
-    background-color: var(--color-light);
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.header-area {
+    width: 70%; 
+    max-width: 800px;
+    margin: 0 auto; 
+    padding-top: 20px; 
+    text-align: center; 
 }
 
-a {
-    text-decoration: none;
-    color: var(--color-dark);
-}
-
-.header-nav {
-    background-color: white;
-    border-bottom: 1px solid #eee;
-}
-
-.nav-content {
+.logo-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
+    gap: 10px;
 }
 
 .logo-img {
-    height: 80px;
+    width: auto;
+    height: 60px;
+    margin-bottom: 5px;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
+.tagline {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 9px;
+    padding-left: 10px;
+    color: hsl(0, 0%, 55%)
+}
+
+.main-nav {
+    width: 70%; 
+    max-width: 800px;
+    margin: 15px auto 0; 
+    background: #57BC90;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.main-nav ul {
+    list-style: none; 
     margin: 0;
     padding: 0;
+    display: flex; 
 }
 
-.nav-links a {
-    padding: 20px 40px;
+.main-nav li {
+    flex-grow: 1; 
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.main-nav li:last-child {
+    border-right: none;
+}
+
+.main-nav a {
+    display: block; 
+    color: white;
+    text-decoration: none;
+    padding: 15px 0; 
     font-weight: bold;
-    transition: color 0.3s;
+    font-size: 16px;
+    transition: background-color 0.3s; 
 }
 
-.nav-links a:hover {
-    color: var(--color-secondary);
+/* --- Active and Hover States --- */
+
+.main-nav a.active {
+    background-color: #57BC90; 
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Image Banner and CTA */
-/* --- 2. MAIN BANNER/IMAGE SECTION --- */
+.main-nav a:not(.active):hover {
+    background-color: #489272;
+}
+
+/* 1.Image Banner and CTA */
 .main-banner {
-    /* Use a placeholder image path or a large background color */
     background-image: url('Images/ImageSlider1.png'); 
     background-size: cover;
     background-position: center;
