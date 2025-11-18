@@ -1,190 +1,525 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
 }
-
-.header-area {
-    width: 70%; 
-    max-width: 800px;
-    margin: 0 auto; 
-    padding-top: 20px; 
-    text-align: center; 
+ 
+body {
+    min-height: 100vh;
+    background-color: gray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.logo-container {
-    display: flex;
-    gap: 10px;
-}
-
-.logo-img {
-    width: auto;
-    height: 60px;
-    margin-bottom: 5px;
-}
-
-.tagline {
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 9px;
-    padding-left: 10px;
-    color: hsl(0, 0%, 55%)
+/* 1. Navigation Bar */
+nav {
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .main-nav {
-    width: 70%; 
-    max-width: 800px;
-    margin: 15px auto 0; 
-    background: #57BC90;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-.main-nav ul {
-    list-style: none; 
-    margin: 0;
-    padding: 0;
-    display: flex; 
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.main-nav li {
-    flex-grow: 1; 
-    text-align: center;
-    border-right: 1px solid rgba(255, 255, 255, 0.4);
+nav li{
+    height: 80px;;
 }
 
-.main-nav li:last-child {
-    border-right: none;
-}
-
-.main-nav a {
-    display: block; 
-    color: white;
+nav a {
+    height: 100%;
+    padding: 0 30px;
     text-decoration: none;
-    padding: 15px 0; 
-    font-weight: bold;
-    font-size: 16px;
-    transition: background-color 0.3s; 
+    display: flex;
+    align-items: center;
+    color: black;
+    white-space: nowrap;
 }
 
-/* --- Active and Hover States --- */
 
-.main-nav a.active {
-    background-color: #57BC90; 
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+
+.logo-default img {
+    width: 80px;
+    height: auto;
 }
 
-.main-nav a:not(.active):hover {
-    background-color: #489272;
+nav a:hover{
+    background-color: #f0f0f0;
 }
 
-/* 1.Image Banner and CTA */
-.main-banner {
-    background-image: url('Images/ImageSlider1.png'); 
+nav li:first-child{
+    margin-right: auto;
+}
+
+.logo-sidebar img {
+    width: 80px;
+    height: auto;
+
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0; 
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10 0 10px rgb(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+@media(max-width: 800px) {
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+
+@media(max-width: 400px) {
+    .sidebar{
+        width: 100%;
+    }
+}
+
+/* 2. Slider */
+.slider-section {
+    background-image: url('../Images/PVCBackground.png');
     background-size: cover;
     background-position: center;
-    height: 400px; /* Set height for visual effect */
+    min-height: 80vh;
     display: flex;
-    align-items: flex-end; /* Position text near the bottom */
-    padding: 30px 50px;
-    color: #ffffff;
-}
-
-.banner-text {
-    font-size: 28px;
-    font-weight: bold;
-    /* Use a subtle background for readability over the image */
-    background-color: rgba(0, 0, 0, 0.4); 
-    padding: 10px 15px;
-    border-radius: 5px;
-}
-
-/* --- 3. INTRODUCTORY HEADER --- */
-.intro-header {
-    background-color: #57BC90; /* Green background */
-    text-align: center;
-    padding: 30px 20px;
-}
-
-.intro-header h1 {
-    font-size: 24px;
-    color: #015249;
-    font-weight: 600;
-}
-
-/* --- 4. CALL-TO-ACTION CARDS SECTION --- */
-.cta-cards-container {
-    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 40px;
-    padding: 60px 40px;
-    background-color: #ffffff;
+    position: relative;
 }
 
-.cta-card {
-    flex-basis: 400px; /* Set a max width for the cards */
-    background-color: #A5A5AF; /* Gray background for cards */
-    border-radius: 15px;
-    padding: 30px;
+.slider-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slider-content {
+    position: relative;
+    z-index: 10;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 64rem;
+    padding: 0 1rem;
 }
 
-.cta-card h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #015249;
+.slider-title {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1rem;
 }
 
-.cta-card p {
-    font-size: 14px;
-    color: #015249;
-    margin-bottom: 25px;
-    line-height: 1.5;
+.slider-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 2rem;
 }
 
-/* Button Styling */
-.cta-button {
-    display: inline-block;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 15px;
-    transition: background-color 0.3s, color 0.3s;
+@media (min-width: 768px) {
+    .slider-title {
+        font-size: 3.75rem;
+    }
+
+    .slider-subtitle {
+        font-size: 1.5rem;
+    }
 }
 
-/* Primary Button (CONTACT US) */
-.primary-button {
-    background-color: #57BC90; 
-    color: #015249;
-}
-
-.primary-button:hover {
-    background-color: #77C9D4; 
-    color: #015249;
-}
-
-/* Secondary Button (VIEW PRODUCTS) */
-.secondary-button {
+/* 3. Call-to-Action */
+.promo-section-wrapper {
     background-color: #57BC90;
-    color: #015249;
+    padding: 3rem 0;
+    text-align: center;
+    background-color: white;
 }
 
-.secondary-button:hover {
-    background-color: #77C9D4;
-    color: #015249;
+.promo-title-main {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #3A55B4;
+    margin-bottom: 2rem;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
 }
 
-/* Responsive Design for smaller screens */
-@media (max-width: 900px) {
-    .cta-cards-container {
-        flex-direction: column;
-        align-items: center;
+@media (min-width: 768px) {
+    .promo-title-main {
+        font-size: 2.25rem;
+    }
+}
+
+.promo-card-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .promo-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.promo-card {
+    /* Simulates the light gray/gradient look from the image */
+    background-color: white;
+    padding: 1.5rem 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 20rem;
+    justify-content: center;
+    transition: transform 300ms;
+}
+
+.promo-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.promo-card-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
+.promo-card-description {
+    color: #4b5563;
+    margin-bottom: 2rem;
+    max-width: 300px;
+    font-size: 1rem;
+}
+
+.cta-button {
+    font-weight: 700;
+    padding: 0.75rem 4rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: all 300ms;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+.cta-button-primary {
+    background-color: #6FFF00;
+    border: 2px solid var(--color-primary);
+    color: var(--color-text-dark);
+    text-decoration: none;
+}
+
+.cta-button-primary:hover {
+    background-color: #CCFF8C;
+}
+
+.cta-button-secondary {
+    background-color: #6FFF00;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    text-decoration: none;
+}
+
+.cta-button-secondary:hover {
+    background-color: #CCFF8C;
+}
+
+
+/* 4. Summary Cards */
+.intro-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    height: auto;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('../Images/PVCBackground4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;   
+}
+
+.section-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+}
+
+.intro-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.intro-card {
+    display: block;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    transition-property: transform, box-shadow;
+    transition-duration: 300ms;
+    text-decoration: none;
+}
+
+.intro-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-0.25rem);
+}
+
+.intro-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #3A55B4;
+}
+
+.intro-card h3:hover{
+    text-decoration: underline;
+}
+
+.intro-card p {
+    color: #4b5563;
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+
+    /* md breakpoint */
+    .intro-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 
-    .cta-card {
-        flex-basis: 100%;
-        width: 90%;
+    .section-container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    /* sm:px-6 */
+}
+
+@media (min-width: 1024px) {
+
+    /* lg breakpoint */
+    .section-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    /* lg:px-8 */
+}
+
+/* 5. Featured Products */
+.product-highlight-section {
+    background: #FFFFFF;
+    padding: 2rem;
+}
+
+.featured-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center; 
+    margin-bottom: 4rem;
+    padding-top: 2rem;
+    color: #000000;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+    margin: 20px;
+}
+
+@media (min-width: 768px) {
+
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
+.product-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    transition: all 300ms ease-in-out;
+}
+
+.product-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    background: cover;
+}
+
+.product-content {
+    padding: 1.5rem;
+}
+
+.product-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 0.5rem;
+}
+
+.product-content p {
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+}
+
+.product-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+}
+
+.tag-blue {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.tag-red {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.tag-sky {
+    background-color: #e0f2fe;
+    color: #075985;
+}
+
+/* 6. Why Choose Us Section */
+.why-choose-section {
+    background-color: #dcfce7;
+    padding: 20px 20px;
+}
+
+.why-choose-section .why-choose-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #3A55B4;
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .why-choose-section .why-choose-title {
+        font-size: 3.25rem;
+    }
+}
+
+.why-choose-section .section-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-secondary-text);
+    margin-bottom: 3rem;
+    text-align: center;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .why-choose-section .section-subtitle {
+        font-size: 1.25rem;
+    }
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.5rem;
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+
+    .why-choose-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+    }
+}
+
+.reason-card {
+    background-color: #f0f0f0;
+    border-radius: 0.75rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid #d4d4d4;
+    font-size: 1.2rem;
+}
+
+.reason-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
