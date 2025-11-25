@@ -9,7 +9,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* 1. Navigation Bar */
+/* Navigation Bar */
 nav {
     background-color: white;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
@@ -136,9 +136,7 @@ nav li:first-child {
     border-radius: 10px;
 }
 
-/* ===========================
-   CONTACT INFO CARDS
-=========================== */
+/* CONTACT INFO CARDS */
 .contact-info {
     display: flex;
     justify-content: center;
@@ -148,7 +146,6 @@ nav li:first-child {
     flex-wrap: wrap;
 }
 
-/* CARD LAYOUT */
 .info-card {
     background: white;
     padding: 32px;
@@ -179,14 +176,11 @@ nav li:first-child {
     background-color: #d0feeb;
 }
 
-/* SVG + TEXT ROW */
 .icon-text-row {
     display: flex;
     align-items: center;
     gap: 18px;
 }
-
-/* SVG ICON */
 
 .icon-svg {
     display: flex;
@@ -203,7 +197,6 @@ nav li:first-child {
     
 }
 
-/* TEXT */
 .text-block h1,
 .text-block h2 {
     margin-bottom: 8px;
@@ -215,7 +208,6 @@ nav li:first-child {
     line-height: 1.6;
 }
 
-/* CARD SIZES */
 .large-card {
     width: 480px;
     height: 250px;
@@ -226,7 +218,6 @@ nav li:first-child {
     width: 480px;
 }
 
-/* RIGHT COLUMN */
 .info-side {
     display: flex;
     flex-direction: column;
@@ -234,7 +225,7 @@ nav li:first-child {
 }
 
 
-/* Contact Layout */
+/* Quote Form */
 .contact-form {
     padding: 40px 7% 80px;
     display: flex;
@@ -284,12 +275,10 @@ textarea {
     gap: 15px;
 }
 
-/* Hide checkbox */
 .toggle-success {
     display: none;
 }
 
-/* Submit Button */
 .submit-btn {
     width: 100%;
     background: black;
@@ -315,7 +304,6 @@ textarea {
     transform: scale(0.96);
 }
 
-/* Success Message */
 .success-message {
     opacity: 0;
     max-height: 0;
@@ -328,7 +316,6 @@ textarea {
     transition: opacity 0.4s ease, max-height 0.4s ease;
 }
 
-/* When checkbox is checked → show message */
 .toggle-success:checked ~ .form-column .success-message {
     opacity: 1;
     max-height: 120px;
@@ -336,30 +323,25 @@ textarea {
     animation: fadeOut 4s forwards;
 }
 
-/* Auto-hide + reset checkbox using CSS only */
 @keyframes fadeOut {
     0% { opacity: 1; }
     70% { opacity: 1; }
     100% { opacity: 0; max-height: 0; }
 }
 
-/* Reset checkbox after animation */
 .toggle-success:checked {
     animation: uncheck 4.2s forwards;
 }
 
 @keyframes uncheck {
     100% { 
-        /* CSS-only trick: remove the checked state */
         opacity: 0;
     }
 }
 
 
 
-/* ===========================
-   RESPONSIVE DESIGN
-=========================== */
+/* RESPONSIVE DESIGN */
 @media (max-width: 900px) {
     .contact-header {
         flex-direction: column;
@@ -382,7 +364,7 @@ textarea {
 }
 
 
-/* 6. Footer */
+/* Footer */
 .footer {
     background-color: #77C9D4;
 }
