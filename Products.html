@@ -6,36 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/Products.css">
     <title>Products</title>
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
 </head>
 
 <body>
-    <!-- Navigation Section -->
-    <header class="header-nav">
-        <div class="container nav-content">
-            <img src="Images/HGIC logo.png" alt="Hanagall Logo" class="logo-img">
-            <ul class="nav-links">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Applications</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About Us</a></li>
-            </ul>
-        </div>
-    </header>
-    <!--Header-->
-    <h1 class="productpage-title">PVC STRIP CURTAIN and PLASTIC PRODUCTS</h1>
+    <!-- 1. Navigation Bar -->
+    <nav class="main-nav">
+        <ul class="sidebar">
+            <li class="logo-sidebar" onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a></li>
+            <li><a href="HomePage.html" class="nav-only">Home</a></li>
+            <li><a href="Products.html" class="nav-only">Products</a></li>
+            <li><a href="Application.html" class="nav-only">Applications</a></li>
+            <li><a href="Services.html" class="nav-only">Services</a></li>
+            <li><a href="Contacts.html" class="nav-only">Contacts</a></li>
+            <li><a href="AboutUs.html" class="nav-only">About Us</a></li>
+        </ul>
+        <ul class="nav-links">
+            <li class="logo-default"><a href="#"><img src="Images/logo.png" alt=""></a></li>
+            <li class="hideOnMobile"><a href="HomePage.html" class="nav-only">Home</a></li>
+            <li class="hideOnMobile"><a href="Products.html" class="nav-only">Products</a></li>
+            <li class="hideOnMobile"><a href="Application.html" class="nav-only">Applications</a></li>
+            <li class="hideOnMobile"><a href="Services.html" class="nav-only">Services</a></li>
+            <li class="hideOnMobile"><a href="Contacts.html" class="nav-only">Contacts</a></li>
+            <li class="hideOnMobile"><a href="AboutUs.html" class="nav-only">About Us</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></li>
+        </ul>
+    </nav>
 
-    <!--Tab Selection-->
-    <section class="tabs">
-        <button class="tab active">All Types</button>
-        <button class="tab">Plain Type</button>
-        <button class="tab">Ribbed Type</button>
+
+
+    <!--2. Header-->
+    <section class="Header-section">
+        <div class="Header-content">
+            <h1>PVC STRIP CURTAIN <br> AND INSTALLATION</h1>
+            <p>Providing quality installation for warehouses, truck vans, and commercial spaces.</p>
+        </div>
     </section>
-    
-    <!--Products Section-->
+
+    <h1 class="product_range"> Our Product Range</h1>
+
+    <!-- 3. Hidden Radio Tabs -->
+    <input type="radio" name="filter" id="all" checked>
+    <input type="radio" name="filter" id="plain">
+    <input type="radio" name="filter" id="ribbed">
+
+    <!--4. Tab Selection-->
+    <section class="tabs">
+        <label for="all" class="tab">All Types</label>
+        <label for="plain" class="tab">Plain Type</label>
+        <label for="ribbed" class="tab">Ribbed Type</label>
+    </section>
+
+    <!-- 5. Products Section-->
     <section class="product-grid">
-        <div class="product-card">
+
+        <!-- Plain Type -->
+        <div class="product-card plain">
             <h3>Standard Clear / Yellow Anti-Insect Plain Type</h3>
             <p>Ideal for food service and commercial areas where pest control is critical.</p>
             <div class="size-image">
@@ -44,73 +86,190 @@
                     ✓ 300MMW x 2MMT x 50M<br>
                     ✓ 300MMW x 3MMT x 50M
                 </p>
-                <img src="https://via.placeholder.com/150x100" alt="PVC Product">
+                <div class="prod-image">
+                    <img src="Images/Standard Plain Type.png" alt="PVC Product">
+                </div>
             </div>
-            <button class="order-btn">Order Now</button>
+            <a href="Contacts.html#quote-form" class="link-quote">
+                <button class="order-btn">Order Now</button>
+            </a>
         </div>
-        <div class="product-card">
+
+        <!-- Ribbed Type -->
+        <div class="product-card ribbed">
             <h3>Standard Clear / Yellow Anti-Insect Ribbed Type</h3>
             <p>Ribbed profile reduces friction on high-traffic doorways, extending curtain lifespan.</p>
             <div class="size-image">
                 <p class="sizes"><strong>Sizes:</strong><br>
                     ✓ 200MMW x 2MMT x 50M<br>
-                    ✓ 300MMW x 3MMT x 50M<br>
+                    ✓ 300MMW x 2MMT x 50M<br>
                 </p>
-                <img src="https://via.placeholder.com/150x100" alt="PVC Product">
+                <div class="prod-image">
+                    <img src="Images/Yellow Anti-Insect Ribbed Type.jpg" alt="PVC Product">
+                </div>
             </div>
-            <button class="order-btn">Order Now</button>
+            <a href="Contacts.html#quote-form" class="link-quote">
+                <button class="order-btn">Order Now</button>
+            </a>
         </div>
-        <div class="product-card">
+
+        <!-- Plain -->
+        <div class="product-card plain">
             <h3>Polar Plain Type</h3>
-            <p> Ideal for food service and commercial areas where pest control is critical.</p>
+            <p>Ideal for food service and commercial areas where pest control is critical.</p>
             <div class="size-image">
                 <p class="sizes"><strong>Sizes:</strong><br>
                     ✓ 200MMW x 2MMT x 50M<br>
                     ✓ 300MMW x 3MMT x 50M<br>
                     ✓ 300MMW x 3MMT x 50M
                 </p>
-                <img src="https://via.placeholder.com/150x100" alt="PVC Product">
+                <div class="prod-image">
+                    <img src="Images/Polar_Plain_Type-removebg-preview.png" alt="PVC Product">
+                </div>
             </div>
-            <button class="order-btn">Order Now</button>
+             <a href="Contacts.html#quote-form" class="link-quote">
+                <button class="order-btn">Order Now</button>
+            </a>
         </div>
-        <div class="product-card">
+
+        <!-- Ribbed -->
+        <div class="product-card ribbed">
             <h3>Polar Ribbed Type</h3>
-            <p> Industrial or commercial areas like warehouses, factories, cold storage, or workshops where protection
-                from dust, wind, and temperature control is needed.</p>
+            <p>For warehouses, factories, cold storage, workshops needing dust/wind control.p>
             <div class="size-image">
                 <p class="sizes"><strong>Sizes:</strong><br>
                     ✓ 200MMW x 2MMT x 50M<br>
                     ✓ 300MMW x 3MMT x 50M<br>
                 </p>
-                <img src="https://via.placeholder.com/150x100" alt="PVC Product">
+                <div class="prod-image">
+                    <img src="Images/Polar_Ribbed_Type-removebg-preview.png" alt="PVC Product">
+                </div>
             </div>
-            <button class="order-btn">Order Now</button>
+             <a href="Contacts.html#quote-form" class="link-quote">
+                <button class="order-btn">Order Now</button>
+            </a>
         </div>
-        <div class="product-card">
+
+
+        <!-- Plain -->
+        <div class="product-card plain">
             <h3>Anti-Static Plain Type </h3>
-            <p>Cleanrooms, electronics manufacturing, laboratories, and areas where static-sensitive equipment or materials need protection.</p>
+            <p>Cleanrooms and electronics where static-sensitive equipment needs protection.</p>
             <div class="size-image">
                 <p class="sizes"><strong>Sizes:</strong><br>
                     ✓ 200MMW x 2MMT x 50M<br>
                 </p>
-                <img src="https://via.placeholder.com/150x100" alt="PVC Product">
+                <div class="prod-image">
+                    <img src="Images/AntiStaticBlack.png" alt="PVC Product">
+                </div>
             </div>
-            <button class="order-btn">Order Now</button>
+            <a href="Contacts.html#quote-form" class="link-quote">
+                <button class="order-btn">Order Now</button>
+            </a>
         </div>
-        <div class="product-card">
+
+        <!-- Plain -->
+        <div class="product-card plain">
             <h3>Black Plain Type </h3>
-            <p>Warehouses, workshops, storage areas, and commercial spaces needing dust, wind, or light control.</p>
+            <p>For workshops, storage areas, commercial spaces needing dust or light control.</p>
             <div class="size-image">
                 <p class="sizes"><strong>Sizes:</strong><br>
                     ✓ 200MMW x 2MMT x 50M<br>
                 </p>
-                <img src="https://via.placeholder.com/150x100" alt="PVC Product">
+                <div class="prod-image">
+                    <img src="Images/opaque-black-pvc-strips-curtain-500x500-removebg-preview.png" alt="PVC Product">
+                </div>
             </div>
-            <button class="order-btn">Order Now</button>
+           <a href="Contacts.html#quote-form" class="link-quote">
+                <button class="order-btn">Order Now</button>
+            </a>
         </div>
     </section>
 
+    <!-- 6. Footer -->
+    <footer class="footer">
+        <div class="page-layout footer-content">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <!-- Column 1: Company Info/Logo -->
+                    <h4>
+                        <img src="Images/HGIC logo.png" alt="Hanagail International Corp.">
+                        Hanagail International Corp.
+                    </h4>
+                    <p>
+                        Your trusted partner for commercial and industrial PVC barrier systems.
+                    </p>
+                </div>
 
+                <!-- Column 2: Quick Links -->
+                <div class="footer-link-group">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="HomePage.html">Home</a></li>
+                        <li><a href="Products.html">Products</a></li>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="Contacts.html">Quote</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Explore -->
+                <div class="footer-link-group">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="Application.html">Application Categories</a></li>
+                        <li><a href="Services.html">Our Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="footer-link-group">
+                    <h4>Contacts</h4>
+
+                    <!-- NEW: Social Media Icons -->
+                    <div class="footer-social-icons">
+                        <a href="mailto:hanagail.internationalcorp88@gmail.com" title="Email us via Gmail">
+                            <!-- Mail SVG (for Gmail/Email) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-mail">
+                                <rect width="20" height="16" x="2" y="4" rx="2" />
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com/HanagailInternationalCorp" target="_blank"
+                            title="Visit our Facebook Page">
+                            <!-- Facebook SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-facebook">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <ul style="font-size: 1rem;">
+                        <!-- Phone Numbers -->
+                        <li><span><a href="#">0995-0832494</a></span></li>
+                        <li><span><a href="#">0942-9653363</a></span></li>
+                        <li><span><a href="#">0951-9376276</a></span></li>
+                        <li><span><a href="#">(8)401-5262</a></span></li>
+
+                        <!-- Address -->
+                        <li style="margin-top: 1.5rem; display: block; line-height: 1.5;">
+                            <span>
+                                Caresville Subdivision Sitio Mata Gumamela Drive Mahabang Parang, Angono, Philippines
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>&copy; 2025 Hanagail International Corp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
