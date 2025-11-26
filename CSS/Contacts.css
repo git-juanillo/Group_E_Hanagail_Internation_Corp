@@ -122,6 +122,7 @@ nav li:first-child {
 
 .header-text {
     width: 55%;
+    margin-bottom: 10px;
 }
 
 .header-text h1 {

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="CSS/AboutUs.css">
+
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 1. Navigation Bar -->
+    <nav class="main-nav">
+        <ul class="sidebar">
+            <li class="logo-sidebar" onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a></li>
+            <li><a href="HomePage.html" class="nav-only">Home</a></li>
+            <li><a href="Products.html" class="nav-only">Products</a></li>
+            <li><a href="Application.html" class="nav-only">Applications</a></li>
+            <li><a href="Services.html" class="nav-only">Services</a></li>
+            <li><a href="Contacts.html" class="nav-only">Contacts</a></li>
+            <li><a href="AboutUs.html" class="nav-only">About Us</a></li>
+        </ul>
+        <ul class="nav-links">
+            <li class="logo-default"><a href="#"><img src="Images/logo.png" alt=""></a></li>
+            <li class="hideOnMobile"><a href="HomePage.html" class="nav-only">Home</a></li>
+            <li class="hideOnMobile"><a href="Products.html" class="nav-only">Products</a></li>
+            <li class="hideOnMobile"><a href="Application.html" class="nav-only">Applications</a></li>
+            <li class="hideOnMobile"><a href="Services.html" class="nav-only">Services</a></li>
+            <li class="hideOnMobile"><a href="Contacts.html" class="nav-only">Contacts</a></li>
+            <li class="hideOnMobile"><a href="AboutUs.html" class="nav-only">About Us</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></li>
+        </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="Header-section">
+        <div class="Header-content">
+            <h1>About Us</h1>
+            <p>Building trust through reliable products and dedicated service since 2015.</p>
+        </div>
+    </section>
+
+    <!-- Company Overview -->
+    <section class="company-overview">
+    <h2>Company Overview</h2>
+    <div class="overview-container">
+        <div class="overview-image"></div>
+        <div class="overview-text">
+            <p>HIC is a company providing a wide range of PVC Strip Curtains Supply and Services including repairs,
+                installation, and preventive maintenance. Our team is composed of highly trained personnel dedicated to
+                delivering top-notch service and exceeding customer expectations.</p>
+                <br>
+            <p>We ensure fast, reliable, and high-quality services that help clients maintain a pleasant working environment
+                and smooth business operations.</p>
+                <br>
+            <p>Around six years ago, HIC expanded its services to meet the growing needs of customers. This expansion
+                included Epoxy Injection Supply & Services, Mechanical Works, Fabrication, Rackings System Installations,
+                Packaging Materials, and even air-conditioning repair and cleaning.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Founder Section -->
+<section class="founder-section">
+    <div class="founder-card">
+        <img src="images/CEO.png" alt="Founder Photo" class="founder-img">
+        <div class="founder-info">
+            <h1>Mr. Albert Miguel</h1>
+            <h3>CEO of Hanagail International Corp.</h3>
+            <br>
+            <p> He built Hanagail International Corporation from the ground up, staying true to his belief that good leadership means
+                being present. He is always on-site with the team, lending a hand, checking progress, supervising work, and making sure
+                every client receives quality services. His hands-on approach is one of the key reasons why Hanagail continues to grow
+                and earn the trust of more customers.</p>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<!-- Mission-Vision -->
+<!-- ========== VISION SECTION ========== -->
+<section class="vision-container">
+    <img src="Images/vision.jpg" alt="Vision Icon" class="vision-image">
+
+    <div class="vision-text">
+        <h2 class="vision-title">Vision</h2>
+        <p class="vision-description">
+            To be the Supplier of Choice for Parts and Services. To be Excellent Service for supply, install, machining,
+            fabrication, and other related services. Ensure no complaint relationship to our customers.
+        </p>
+    </div>
+</section>
+
+
+<!-- ========== MISSION SECTION ========== -->
+<section class="mission-container">
+    <div class="mission-text">
+        <h2 class="mission-title">Mission</h2>
+        <p class="mission-description">
+            <strong>To Our Principal:</strong><br>
+            To help our principal in generating sales volume through an excellent level of service that meets and
+            maintains their standards.
+        </p>
+
+        <p class="mission-description">
+            <strong>To Our Customers:</strong><br>
+            Provide the fastest customer care by giving them unsurpassed service solutions, product offerings that meet
+            the real needs of their day-to-day tasks, and consistently making them feel valued as they help us in our business.
+        </p>
+    </div>
+
+    <img src="Images/mission.jpg" alt="Mission Icon" class="mission-image">
+</section>
+
+
+<!-- Choose us -->
+<section class="why-choose">
+    <h1>Why Choose Us?</h1>
+
+    <div class="why-grid">
+        <div class="card">
+            <h4>Proven Experience</h4>
+            <p>Hanagail International Corporation has been in the industry since 2015, serving various clients in different
+               sectors while continuously improving service quality.</p>
+        </div>
+
+        <div class="card">
+            <h4>Quality Materials and Workmanship</h4>
+            <p>We use high-quality materials and employ trained professionals to ensure dependable and long-lasting work.</p>
+        </div>
+
+        <div class="card">
+            <h4>Reliable Service and Fast Response</h4>
+            <p>We value timely communication and ensure that service requests and concerns are addressed as quickly as possible.</p>
+        </div>
+
+        <div class="card">
+            <h4>Commitment to Client Satisfaction</h4>
+            <p>We prioritize building long-term relationships with clients by providing consistent and top-quality service.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Need industrial solutions?</h2>
+    <p>Reach out to us for inquiries, service requests, or quotations.</p>
+    <a href="Contacts.html"><button class="cta-btn">Contact Us Now</button></a>
+</section>
+
+<!-- 6. Footer -->
+    <footer class="footer">
+        <div class="page-layout footer-content">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <!-- Column 1: Company Info/Logo -->
+                    <h4>
+                        <img src="Images/HGIC logo.png" alt="Hanagail International Corp.">
+                        Hanagail International Corp.
+                    </h4>
+                    <p>
+                        Your trusted partner for commercial and industrial PVC barrier systems.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-link-group">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="HomePage.html">Home</a></li>
+                        <li><a href="Products.html">Products</a></li>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="Contacts.html">Quote</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Explore -->
+                <div class="footer-link-group">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="Application.html">Application Categories</a></li>
+                        <li><a href="Services.html">Our Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="footer-link-group">
+                    <h4>Contacts</h4>
+
+                    <!-- NEW: Social Media Icons -->
+                    <div class="footer-social-icons">
+                        <a href="mailto:hanagail.internationalcorp88@gmail.com" title="Email us via Gmail">
+                            <!-- Mail SVG (for Gmail/Email) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-mail">
+                                <rect width="20" height="16" x="2" y="4" rx="2" />
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com/HanagailInternationalCorp" target="_blank"
+                            title="Visit our Facebook Page">
+                            <!-- Facebook SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-facebook">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <ul style="font-size: 1rem;">
+                        <!-- Phone Numbers -->
+                        <li><span><a href="#">0995-0832494</a></span></li>
+                        <li><span><a href="#">0942-9653363</a></span></li>
+                        <li><span><a href="#">0951-9376276</a></span></li>
+                        <li><span><a href="#">(8)401-5262</a></span></li>
+
+                        <!-- Address -->
+                        <li style="margin-top: 1.5rem; display: block; line-height: 1.5;">
+                            <span>
+                                Caresville Subdivision Sitio Mata Gumamela Drive Mahabang Parang, Angono, Philippines
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>&copy; 2025 Hanagail International Corp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
