@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application</title>
     <link rel="stylesheet" href="CSS/Application.css">
-
+<script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
 
 
 </head>
@@ -22,7 +31,7 @@
                     </svg></a></li>
             <li><a href="HomePage.html" class="nav-only">Home</a></li>
             <li><a href="Products.html" class="nav-only">Products</a></li>
-            <li><a href="#" class="nav-only">Applications</a></li>
+            <li><a href="Application.html" class="nav-only">Applications</a></li>
             <li><a href="Services.html" class="nav-only">Services</a></li>
             <li><a href="Contacts.html" class="nav-only">Contacts</a></li>
             <li><a href="AboutUs.html" class="nav-only">About Us</a></li>
@@ -82,7 +91,12 @@
     <section class="application">
         <h2>Hygiene & Safety</h2>
         <div class="app-content">
-            <img src="Images/Application2.png" alt=" ">
+            <div class="media">
+                <img src="Images/Application2.png" alt="">
+                <video muted preload="auto">
+                    <source src="Videos/your-video-file.mp4" type="video/mp4">
+                </video>
+            </div>
             <p>
                 Perfect for clinics, hospitals, laboratories, and restaurants, our PVC curtains help maintain strict
                 hygiene and sanitation standards.
@@ -100,7 +114,12 @@
     <section class="application">
         <h2>Commercial & Retail</h2>
         <div class="app-content">
-            <img src="Images/Application3.png" alt=" ">
+            <div class="media">
+                <img src="Images/Application3.png" alt="">
+                <video muted preload="auto">
+                    <source src="Videos/your-video-file.mp4" type="video/mp4">
+                </video>
+            </div>
             <p>
                 Our PVC strip curtains are widely used in supermarkets, convenience stores, offices, and retail spaces
                 to enhance both functionality and visual appeal.
@@ -111,13 +130,18 @@
                 They also reduce noise, improve airflow, and contribute to a more organized and efficient commercial
                 environment.
             </p>
-
+        </div>
     </section>
 
     <section class="application">
         <h2>Logistics</h2>
         <div class="app-content">
-            <img src=" " alt=" ">
+            <div class="media">
+                <img src="" alt="">
+                <video muted preload="auto">
+                    <source src="Videos/your-video-file.mp4" type="video/mp4">
+                </video>
+            </div>
             <p>
                 Widely applied in delivery truck vans, logistics hubs, and transport facilities, our PVC curtains help
                 maintain product stability during movement.
@@ -132,8 +156,88 @@
         </div>
     </section>
 
-    <footer>
-        <p>Hanagail International Corp | Designed for practical and safe applications</p>
+  <footer class="footer">
+        <div class="page-layout footer-content">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <!-- Column 1: Company Info/Logo -->
+                    <h4>
+                        <img src="Images/HGIC logo.png" alt="Hanagail International Corp.">
+                        Hanagail International Corp.
+                    </h4>
+                    <p>
+                        Your trusted partner for commercial and industrial PVC barrier systems.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-link-group">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="HomePage.html">Home</a></li>
+                        <li><a href="Products.html">Products</a></li>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="Contacts.html">Quote</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Explore -->
+                <div class="footer-link-group">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="Application.html">Application Categories</a></li>
+                        <li><a href="Services.html">Our Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="footer-link-group">
+                    <h4>Contacts</h4>
+
+                    <!-- NEW: Social Media Icons -->
+                    <div class="footer-social-icons">
+                        <a href="mailto:hanagail.internationalcorp88@gmail.com" title="Email us via Gmail">
+                            <!-- Mail SVG (for Gmail/Email) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-mail">
+                                <rect width="20" height="16" x="2" y="4" rx="2" />
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com/HanagailInternationalCorp" target="_blank"
+                            title="Visit our Facebook Page">
+                            <!-- Facebook SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-facebook">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <ul style="font-size: 1rem;">
+                        <!-- Phone Numbers -->
+                        <li><span><a href="#">0995-0832494</a></span></li>
+                        <li><span><a href="#">0942-9653363</a></span></li>
+                        <li><span><a href="#">0951-9376276</a></span></li>
+                        <li><span><a href="#">(8)401-5262</a></span></li>
+
+                        <!-- Address -->
+                        <li style="margin-top: 1.5rem; display: block; line-height: 1.5;">
+                            <span>
+                                Caresville Subdivision Sitio Mata Gumamela Drive Mahabang Parang, Angono, Philippines
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>&copy; 2025 Hanagail International Corp. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
 
