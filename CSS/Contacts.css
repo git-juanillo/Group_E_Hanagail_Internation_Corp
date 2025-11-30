@@ -137,6 +137,12 @@ nav li:first-child {
     border-radius: 10px;
 }
 
+@media (min-width: 768px) {
+    .contact-header{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* CONTACT INFO CARDS */
 .contact-info {
     display: flex;
@@ -154,7 +160,7 @@ nav li:first-child {
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     display: flex;
     flex-direction: row;
-    width: 420px;
+    width: auto;
     align-items: center;
     justify-content: flex-start;
     transition: all 0.25s ease-in-out;
@@ -210,13 +216,13 @@ nav li:first-child {
 }
 
 .large-card {
-    width: 480px;
+    width: auto;
     height: 250px;
     margin-bottom: auto;
 }
 
 .small-card {
-    width: 480px;
+    width: auto;
 }
 
 .info-side {
@@ -224,7 +230,6 @@ nav li:first-child {
     flex-direction: column;
     gap: 20px;
 }
-
 
 /* Quote Form */
 .contact-form {
