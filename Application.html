@@ -6,27 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application</title>
     <link rel="stylesheet" href="CSS/Application.css">
+
     <script>
-        function showSidebar() {
+        function showSidebar(e) {
+            if (e) {
+                e.preventDefault();
+            }
+
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'flex'
         }
-        function hideSidebar() {
+
+        function hideSidebar(e) {
+            if (e) {
+                e.preventDefault();
+            }
+
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'none'
         }
     </script>
-
-
 </head>
 
 <body>
     <!-- NAV BAR -->
-    <nav class="main-nav">
+   <nav class="main-nav">
         <ul class="sidebar">
-            <li class="logo-sidebar" onclick="hideSidebar()"><a href="HomePage.html"><svg
-                        xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px"
-                        fill="#000000">
+            <li class="logo-sidebar" onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000">
                         <path
                             d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                     </svg></a></li>
@@ -38,7 +45,7 @@
             <li><a href="AboutUs.html" class="nav-only">About Us</a></li>
         </ul>
         <ul class="nav-links">
-            <li class="logo-default"><a href="HomePage.html"><img src="Images/logo.png" alt=""></a></li>
+            <li class="logo-default"><a href="#"><img src="Images/logo.png" alt=""></a></li>
             <li class="hideOnMobile"><a href="HomePage.html" class="nav-only">Home</a></li>
             <li class="hideOnMobile"><a href="Products.html" class="nav-only">Products</a></li>
             <li class="hideOnMobile"><a href="Application.html" class="nav-only">Applications</a></li>
@@ -51,6 +58,7 @@
                     </svg></a></li>
         </ul>
     </nav>
+
 
 
 
@@ -248,23 +256,23 @@
 
 
 
-<!-- player for video -->
+    <!-- player for video -->
 
-<script>
-document.querySelectorAll(".media").forEach(container => {
-    const video = container.querySelector("video");
+    <script>
+        document.querySelectorAll(".media").forEach(container => {
+            const video = container.querySelector("video");
 
-    container.addEventListener("mouseenter", () => {
-        video.currentTime = 0;
-        video.play().catch(err => console.log(err));
-    });
+            container.addEventListener("mouseenter", () => {
+                video.currentTime = 0;
+                video.play().catch(err => console.log(err));
+            });
 
-    container.addEventListener("mouseleave", () => {
-        video.pause();
-        video.currentTime = 0;
-    });
-});
-</script>
+            container.addEventListener("mouseleave", () => {
+                video.pause();
+                video.currentTime = 0;
+            });
+        });
+    </script>
 
 </body>
 
