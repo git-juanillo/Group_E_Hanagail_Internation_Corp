@@ -8,51 +8,63 @@
     <link rel="stylesheet" href="CSS/HomePage.css">
 
     <script>
-        function showSidebar() {
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'flex'
+    function showSidebar(e) {
+        if (e) {
+            e.preventDefault(); 
         }
-        function hideSidebar() {
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'none'
+        
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+    
+    function hideSidebar(e) {
+        if (e) {
+            e.preventDefault(); 
         }
-    </script>
+        
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+    }
+</script>
 </head>
 
 <body>
     <!-- 1. Navigation Bar -->
     <nav class="main-nav">
         <ul class="sidebar">
-            <li class="logo-sidebar" onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
-                        height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000">
-                        <path
-                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                    </svg></a></li>
-            <li><a href="HomePage.html" class="nav-only">Home</a></li>
-            <li><a href="Products.html" class="nav-only">Products</a></li>
-            <li><a href="Application.html" class="nav-only">Applications</a></li>
-            <li><a href="Services.html" class="nav-only">Services</a></li>
-            <li><a href="Contacts.html" class="nav-only">Contacts</a></li>
-            <li><a href="AboutUs.html" class="nav-only">About Us</a></li>
-        </ul>
-        <ul class="nav-links">
-            <li class="logo-default"><a href="HomePage.html"><img src="Images/logo.png" alt=""></a></li>
-            <li class="hideOnMobile"><a href="HomePage.html" class="nav-only">Home</a></li>
-            <li class="hideOnMobile"><a href="Products.html" class="nav-only">Products</a></li>
-            <li class="hideOnMobile"><a href="Application.html" class="nav-only">Applications</a></li>
-            <li class="hideOnMobile"><a href="Services.html" class="nav-only">Services</a></li>
-            <li class="hideOnMobile"><a href="Contacts.html" class="nav-only">Contacts</a></li>
-            <li class="hideOnMobile"><a href="AboutUs.html" class="nav-only">About Us</a></li>
-            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
-                        height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000">
-                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-                    </svg></a></li>
-        </ul>
-    </nav>
+            <li class="logo-sidebar"><a href="#" onclick="hideSidebar(event)"><svg xmlns="http://www.w3.org/2000/svg"
+                         height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000">
+                         <path
+                             d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                     </svg></a></li>
+             <li><a href="HomePage.html" class="nav-only">Home</a></li>
+             <li><a href="Products.html" class="nav-only">Products</a></li>
+             <li><a href="Application.html" class="nav-only">Applications</a></li>
+             <li><a href="Services.html" class="nav-only">Services</a></li>
+             <li><a href="Contacts.html" class="nav-only">Contacts</a></li>
+             <li><a href="AboutUs.html" class="nav-only">About Us</a></li>
+         </ul>
+         <ul class="nav-links">
+             <li class="logo-default"><a href="HomePage.html"><img src="Images/logo.png" alt=""></a></li>
+             <li class="hideOnMobile"><a href="HomePage.html" class="nav-only">Home</a></li>
+             <li class="hideOnMobile"><a href="Products.html" class="nav-only">Products</a></li>
+             <li class="hideOnMobile"><a href="Application.html" class="nav-only">Applications</a></li>
+             <li class="hideOnMobile"><a href="Services.html" class="nav-only">Services</a></li>
+             <li class="hideOnMobile"><a href="Contacts.html" class="nav-only">Contacts</a></li>
+             <li class="hideOnMobile"><a href="AboutUs.html" class="nav-only">About Us</a></li>
+             
+             <li class="menu-button"><a href="#" onclick="showSidebar(event)"><svg xmlns="http://www.w3.org/2000/svg"
+                         height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000">
+                         <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                     </svg></a></li>
+         </ul>
+     </nav>
 
 
     <main>
-        <!-- 2. Slider -->
+
+
+    <!-- 2. Slider -->
         <section class="slider-section">
             <div class="slider-overlay"></div>
             <div class="slider-content">
@@ -65,7 +77,8 @@
             </div>
         </section>
 
-        <!-- 3. Call-To-Action (CTAs) -->
+
+    <!-- 3. Call-To-Action (CTAs) -->
         <section class="promo-section-wrapper">
             <h2 class="promo-title-main">Complete PVC Strip Curtain Solutions: Supply, Fabrication, and Expert
                 Installation</h2>
@@ -95,6 +108,7 @@
             </div>
         </section>
     </main>
+
 
     <!-- 4. Featured Products -->
     <section id="products" class="section-padding product-highlight-section">
@@ -136,7 +150,8 @@
         </div>
     </section>
 
-    <!-- 6. Why Choose Us -->
+
+    <!-- 5. Why Choose PVC -->
     <section class="why-choose-section">
         <div class="page-layout section-center-content">
             <h2 class="why-choose-title">Why Choose PVC Strip Curtains?</h2>
@@ -166,7 +181,7 @@
         </div>
     </section>
 
-    <!-- 5. Pages Summary -->
+    <!-- 6. Summary Cards -->
     <section class="intro-section">
         <div class="section-container">
             <h2>Comprehensive Solutions for Your Business</h2>
