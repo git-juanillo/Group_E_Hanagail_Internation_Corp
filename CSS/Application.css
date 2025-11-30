@@ -1,15 +1,14 @@
-* {
+*   {
     margin: 0;
     padding: 0;
 }
 
 body {
-    margin: 0;
     padding: 0;
+    margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  
-}
 
+}
 
 /*Navigation Section*/  
 nav {
@@ -31,7 +30,7 @@ nav ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
+} 
 
 nav li {
   height: 80px;
@@ -113,7 +112,7 @@ nav li:first-child {
 }
 
 
-/* Call to action section */
+/* CTA */
 .cta {
     width: 100%;
     padding: 100px 20px;
@@ -128,8 +127,7 @@ nav li:first-child {
 
 .cta-content {
     max-width: 800px;
-    animation: fadeIn 1.2s ease-out forwards;
-    opacity: 0;
+    opacity: 1; 
     margin: 0 auto; 
     padding-top: 100px;
 }
@@ -167,11 +165,6 @@ nav li:first-child {
     box-shadow: 0 0 18px rgba(255,255,255,0.9);
 }
 
-/* Animation */
-@keyframes fadeIn {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
 
 
 
