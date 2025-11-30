@@ -5,7 +5,7 @@
 
 body {
     min-height: 100vh;
-    background-color: gray;
+    background-color: #f0f0f0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -44,8 +44,6 @@ nav a {
     color: black;
     white-space: nowrap;
 }
-
-
 
 .logo-default img {
     width: 80px;
@@ -110,6 +108,7 @@ nav li:first-child {
     }
 }
 
+
 /* 2. Slider */
 .slider-section {
     background-image: url('../Images/PVCBackground.png');
@@ -163,6 +162,7 @@ nav li:first-child {
     }
 }
 
+
 /* 3. Call-to-Action */
 .promo-section-wrapper {
     background-color: #57BC90;
@@ -205,7 +205,6 @@ nav li:first-child {
 }
 
 .promo-card {
-    /* Simulates the light gray/gradient look from the image */
     background-color: white;
     padding: 1.5rem 1.5rem;
     border-radius: 20px;
@@ -257,8 +256,8 @@ nav li:first-child {
 
 .cta-button-primary {
     background-color: #6FFF00;
-    border: 2px solid var(--color-primary);
-    color: var(--color-text-dark);
+    border: 2px solid none;
+    color: black;
     text-decoration: none;
 }
 
@@ -268,14 +267,15 @@ nav li:first-child {
 
 .cta-button-secondary {
     background-color: #6FFF00;
-    color: var(--color-primary);
-    border: 2px solid var(--color-primary);
+    color: black;
+    border: 2px solid none;
     text-decoration: none;
 }
 
 .cta-button-secondary:hover {
     background-color: #CCFF8C;
 }
+
 
 /* 4. Featured Products */
 .product-highlight-section {
@@ -364,7 +364,8 @@ nav li:first-child {
     color: #075985;
 }
 
-/* 6. Why Choose Us Section */
+
+/* 5. Why Choose PVC Section */
 .why-choose-section {
     background-color: #dcfce7;
     padding: 20px 20px;
@@ -387,7 +388,7 @@ nav li:first-child {
 
 .why-choose-section .section-subtitle {
     font-size: 1.125rem;
-    color: var(--color-secondary-text);
+    color: #000000;
     margin-bottom: 3rem;
     text-align: center;
     max-width: 40rem;
@@ -439,7 +440,8 @@ nav li:first-child {
     transform: translateY(-2px);
 }
 
-/* 5. Summary Cards */
+
+/* 6. Summary Cards */
 .intro-section {
     padding-top: 4rem;
     padding-bottom: 4rem;

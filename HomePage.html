@@ -8,11 +8,20 @@
     <link rel="stylesheet" href="CSS/HomePage.css">
 
     <script>
-        function showSidebar() {
+        function showSidebar(e) {
+            if (e) {
+                e.preventDefault();
+            }
+
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'flex'
         }
-        function hideSidebar() {
+
+        function hideSidebar(e) {
+            if (e) {
+                e.preventDefault();
+            }
+
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'none'
         }
@@ -23,7 +32,7 @@
     <!-- 1. Navigation Bar -->
     <nav class="main-nav">
         <ul class="sidebar">
-            <li class="logo-sidebar" onclick="hideSidebar()"><a href="HomePage.html"><svg xmlns="http://www.w3.org/2000/svg"
+            <li class="logo-sidebar"><a href="#" onclick="hideSidebar(event)"><svg xmlns="http://www.w3.org/2000/svg"
                         height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000">
                         <path
                             d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
@@ -43,7 +52,8 @@
             <li class="hideOnMobile"><a href="Services.html" class="nav-only">Services</a></li>
             <li class="hideOnMobile"><a href="Contacts.html" class="nav-only">Contacts</a></li>
             <li class="hideOnMobile"><a href="AboutUs.html" class="nav-only">About Us</a></li>
-            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+
+            <li class="menu-button"><a href="#" onclick="showSidebar(event)"><svg xmlns="http://www.w3.org/2000/svg"
                         height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000">
                         <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
                     </svg></a></li>
@@ -64,6 +74,7 @@
                 </p>
             </div>
         </section>
+
 
         <!-- 3. Call-To-Action (CTAs) -->
         <section class="promo-section-wrapper">
@@ -95,6 +106,7 @@
             </div>
         </section>
     </main>
+
 
     <!-- 4. Featured Products -->
     <section id="products" class="section-padding product-highlight-section">
@@ -136,28 +148,25 @@
         </div>
     </section>
 
-    <!-- 6. Why Choose Us -->
+
+    <!-- 5. Why Choose PVC -->
     <section class="why-choose-section">
         <div class="page-layout section-center-content">
             <h2 class="why-choose-title">Why Choose PVC Strip Curtains?</h2>
             <p class="section-subtitle">Immediate, cost-effective, and long-lasting advantages for your facility.</p>
             <div class="why-choose-grid">
-                <!-- Reason 1: Energy Savings (Zap SVG) -->
                 <div class="reason-card">
                     <h4>Energy Savings</h4>
                     <p>Significantly reduce heat and cold loss, lowering utility bills year-round.</p>
                 </div>
-                <!-- Reason 2: Contaminant Control (Shield Check SVG) -->
                 <div class="reason-card">
                     <h4>Contaminant Control</h4>
                     <p>Block dust, debris, pests, and airborne contaminants from sensitive areas.</p>
                 </div>
-                <!-- Reason 3: Noise Reduction (Volume X SVG) -->
                 <div class="reason-card">
                     <h4>Noise Reduction</h4>
                     <p>Dampen loud machinery noise, creating a quieter and safer work environment.</p>
                 </div>
-                <!-- Reason 4: Easy Access & Visibility (Scan SVG) -->
                 <div class="reason-card">
                     <h4>Easy Access & Visibility</h4>
                     <p>Maintain clear sightlines while allowing personnel and vehicles effortless passage.</p>
@@ -166,7 +175,8 @@
         </div>
     </section>
 
-    <!-- 5. Pages Summary -->
+
+    <!-- 6. Summary Cards -->
     <section class="intro-section">
         <div class="section-container">
             <h2>Comprehensive Solutions for Your Business</h2>
@@ -230,6 +240,7 @@
         </div>
     </section>
 
+    
     <!-- 6. Footer -->
     <footer class="footer">
         <div class="page-layout footer-content">

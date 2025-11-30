@@ -302,12 +302,13 @@ input[type="radio"] {
   background-color: #00695C;
 }
 
-.link-quote{
+.link-quote {
   text-decoration-line: none;
 }
 
 /* 5. Footer */
 .footer {
+  width: 100%;
   background-color: #77C9D4;
   margin-top: 50px;
 }
@@ -321,7 +322,7 @@ input[type="radio"] {
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  margin: 1.5rem;
+  
   gap: 20px;
   padding-bottom: 2rem;
   margin-bottom: 2rem;
@@ -333,6 +334,12 @@ input[type="radio"] {
   .footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .footer-grid{
+    margin: 1.5rem 0;
+    padding: 0 15px;;
+  }
+
 }
 
 @media (min-width: 1024px) {
@@ -465,4 +472,116 @@ input[type="radio"] {
 .copyright p {
   font-size: 0.875rem;
   color: rgba(0, 0, 0, 0.8);
+}
+
+/* MOBILE RESPONSIVE*/
+@media(max-width: 768px) {
+
+  /* 1. Navigation */
+  .hideOnMobile {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  /* 2. Header Section */
+  .Header-section {
+    height: 350px;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .Header-content {
+    margin-top: 80px;
+  }
+
+  .Header-content h1 {
+    font-size: 36px;
+    letter-spacing: 1px;
+  }
+
+  .Header-content p {
+    font-size: 16px;
+  }
+
+  /* 3. TABS */
+  .product_range {
+    margin-left: 0;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+
+  .tabs .tab {
+    margin: 5px 5px;
+    padding: 8px 15px;
+  }
+
+  /* 4. Products */
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 400px;
+    padding: 0 20px; 
+  }
+
+  .prod-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .product-card img {
+    width: 100px;
+    height: auto;
+  }
+}
+
+@media(max-width: 400px) {
+
+  /* 1. Sidebar */
+  .sidebar {
+    width: 100%;
+  }
+
+  /* 2. Header Section */
+  .Header-section {
+    height: 300px;
+    padding: 0 15px;
+  }
+
+  .Header-content h1 {
+    font-size: 30px;
+  }
+
+  .Header-content p {
+    font-size: 14px;
+  }
+
+  /* 3. TABS */
+  .tabs .tab {
+    font-size: 14px;
+  }
+
+  /* 4. Products */
+  .product-card {
+    padding: 15px;
+  }
+
+  .product-card h3 {
+    font-size: 18px;
+  }
+
+  /* 5. Footer */
+  .footer-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin: 1rem;
+  }
+
+  .footer-link-group h4 {
+    font-size: 1.25rem;
+  }
 }
