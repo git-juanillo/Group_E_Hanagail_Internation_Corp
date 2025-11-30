@@ -7,11 +7,20 @@
     <link rel="stylesheet" href="CSS/Products.css">
     <title>Products</title>
     <script>
-        function showSidebar() {
+        function showSidebar(e) {
+            if (e) {
+                e.preventDefault();
+            }
+
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'flex'
         }
-        function hideSidebar() {
+
+        function hideSidebar(e) {
+            if (e) {
+                e.preventDefault();
+            }
+
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'none'
         }
