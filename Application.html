@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application</title>
     <link rel="stylesheet" href="CSS/Application.css">
-<script>
+    <script>
         function showSidebar() {
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'flex'
@@ -24,8 +24,9 @@
     <!-- NAV BAR -->
     <nav class="main-nav">
         <ul class="sidebar">
-            <li class="logo-sidebar" onclick="hideSidebar()"><a href="HomePage.html"><svg xmlns="http://www.w3.org/2000/svg"
-                        height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000">
+            <li class="logo-sidebar" onclick="hideSidebar()"><a href="HomePage.html"><svg
+                        xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px"
+                        fill="#000000">
                         <path
                             d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                     </svg></a></li>
@@ -55,8 +56,6 @@
 
 
 
-
-
     <!-- CALL TO ACTION -->
     <section class="cta">
         <div class="cta-content">
@@ -77,7 +76,7 @@
             <div class="media">
                 <img src="Images/Application1.png" alt="">
                 <video muted preload="auto">
-                    <source src="Videos/your-video-file.mp4" type="video/mp4">
+                    <source src="Images/AppVid1.mp4" type="video/mp4">
                 </video>
             </div>
 
@@ -100,7 +99,7 @@
             <div class="media">
                 <img src="Images/Application2.png" alt="">
                 <video muted preload="auto">
-                    <source src="Videos/your-video-file.mp4" type="video/mp4">
+                    <source src="Images/AppVid2.mp4" type="video/mp4">
                 </video>
             </div>
             <p>
@@ -123,7 +122,7 @@
             <div class="media">
                 <img src="Images/Application3.png" alt="">
                 <video muted preload="auto">
-                    <source src="Videos/your-video-file.mp4" type="video/mp4">
+                    <source src="Images/AppVid3.mp4" type="video/mp4">
                 </video>
             </div>
             <p>
@@ -145,8 +144,9 @@
             <div class="media">
                 <img src="Images/Application4.png" alt="">
                 <video muted preload="auto">
-                    <source src="Videos/your-video-file.mp4" type="video/mp4">
+                    <source src="Images/AppVid4.mp4 " type="video/mp4">
                 </video>
+
             </div>
             <p>
                 Widely applied in delivery truck vans, logistics hubs, and transport facilities, our PVC curtains help
@@ -162,7 +162,7 @@
         </div>
     </section>
 
-  <footer class="footer">
+    <footer class="footer">
         <div class="page-layout footer-content">
             <div class="footer-grid">
                 <div class="footer-logo">
@@ -247,6 +247,24 @@
     </footer>
 
 
+
+<!-- player for video -->
+
+<script>
+document.querySelectorAll(".media").forEach(container => {
+    const video = container.querySelector("video");
+
+    container.addEventListener("mouseenter", () => {
+        video.currentTime = 0;
+        video.play().catch(err => console.log(err));
+    });
+
+    container.addEventListener("mouseleave", () => {
+        video.pause();
+        video.currentTime = 0;
+    });
+});
+</script>
 
 </body>
 
