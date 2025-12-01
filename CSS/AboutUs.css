@@ -111,7 +111,7 @@ nav li:first-child {
 
 /* HEADER */
 .Header-section {
-  background: url(../images/Header_AU.png);
+  background: url(../Images/Header_AU.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -166,7 +166,7 @@ nav li:first-child {
 .overview-image {
     width: 320px;
     height: 320px;
-    background: url('../images/logo.png') center/contain no-repeat;
+    background: url('../Images/logo.png') center/contain no-repeat;
 }
 
 .overview-text {
