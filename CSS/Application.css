@@ -180,7 +180,6 @@ nav li:first-child {
   max-width: 1000px;
   margin: 60px auto;
   padding: 20px;
- 
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -192,7 +191,7 @@ nav li:first-child {
   font-size: 1.8rem;
   border-left: 6px solid #77C9D4;
   padding-left: 10px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .application:hover{
