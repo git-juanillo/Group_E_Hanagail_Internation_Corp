@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -121,7 +120,8 @@ nav li:first-child {
 }
 
 .header-text {
-    width: auto; /* Adjusted for better scaling */
+    width: auto;
+    /* Adjusted for better scaling */
     margin-bottom: 10px;
 }
 
@@ -138,12 +138,14 @@ nav li:first-child {
 }
 
 @media (min-width: 768px) {
-    .contact-header{
+    .contact-header {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .header-text {
-        width: 55%; 
+        width: 55%;
     }
+
     .header-image img {
         width: 420px;
         height: 300px;
@@ -162,8 +164,8 @@ nav li:first-child {
 
 /* DESKTOP CARD FIXES */
 .large-card {
-    width: 48%; 
-    height:auto;
+    width: 48%;
+    height: auto;
     margin-bottom: auto;
 }
 
@@ -171,19 +173,20 @@ nav li:first-child {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 48%; 
+    width: 48%;
 }
+
 /* END OF DESKTOP CARD FIXES */
 
 .info-card {
     background: white;
     padding: 32px;
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: row;
     width: auto;
-    align-items: flex-start; 
+    align-items: flex-start;
     justify-content: flex-start;
     transition: all 0.25s ease-in-out;
 }
@@ -207,7 +210,8 @@ nav li:first-child {
 
 .icon-text-row {
     display: flex;
-    align-items: flex-start; /* Ensures text starts at the top of the icon */
+    align-items: flex-start;
+    /* Ensures text starts at the top of the icon */
     gap: 18px;
     width: 100%;
 }
@@ -218,37 +222,38 @@ nav li:first-child {
     align-items: center;
     width: 60px;
     height: 60px;
-    flex-shrink: 0; /* Prevents icon from shrinking on mobile */
+    flex-shrink: 0;
+    /* Prevents icon from shrinking on mobile */
 }
 
 .icon-svg svg {
     width: 100%;
     height: 100%;
     fill: #333;
-    
+
 }
 
 /* Specific text block styling for better readability */
 .text-block {
-    flex-grow: 1; 
-    min-width: 0; 
+    flex-grow: 1;
+    min-width: 0;
 }
 
 .text-block h1,
 .text-block h2 {
-    margin-bottom: 5px; 
-    font-weight: 700; 
-    font-size: 20px; 
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 20px;
 }
 
-.large-card .text-block p { 
-    font-size: 16px; 
+.large-card .text-block p {
+    font-size: 16px;
     line-height: 1.4;
-    word-break: break-word; 
+    word-break: break-word;
 }
 
-.small-card .text-block p { 
-    font-size: 14px; 
+.small-card .text-block p {
+    font-size: 14px;
     line-height: 1.4;
     word-break: break-word;
 }
@@ -266,7 +271,7 @@ nav li:first-child {
 
 .form-container {
     background: white;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     border-radius: 16px;
     padding: 50px;
     max-width: 1150px;
@@ -289,7 +294,8 @@ label {
     font-weight: 600;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 12px;
     margin: 5px 0 18px;
@@ -348,7 +354,7 @@ textarea {
     transition: opacity 0.4s ease, max-height 0.4s ease;
 }
 
-.toggle-success:checked ~ .form-column .success-message {
+.toggle-success:checked~.form-column .success-message {
     opacity: 1;
     max-height: 120px;
     padding: 12px;
@@ -356,9 +362,18 @@ textarea {
 }
 
 @keyframes fadeOut {
-    0% { opacity: 1; }
-    70% { opacity: 1; }
-    100% { opacity: 0; max-height: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        max-height: 0;
+    }
 }
 
 .toggle-success:checked {
@@ -366,7 +381,7 @@ textarea {
 }
 
 @keyframes uncheck {
-    100% { 
+    100% {
         opacity: 0;
     }
 }
@@ -375,16 +390,18 @@ textarea {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 900px) {
+
     /* HEADER FIXES */
     .contact-header {
         flex-direction: column;
         text-align: center;
-        align-items: center; /* Ensures content is centered */
+        align-items: center;
+        /* Ensures content is centered */
     }
-    
+
     .header-text {
-        text-align: center; 
-        margin-bottom: 20px; 
+        text-align: center;
+        margin-bottom: 20px;
     }
 
     .header-image img {
@@ -392,35 +409,38 @@ textarea {
         max-width: 300px;
         height: auto;
     }
+
     /* END HEADER FIXES */
 
     .contact-info {
         flex-direction: column;
         align-items: center;
-        gap: 20px; 
+        gap: 20px;
     }
 
     /* MOBILE CARD FIXES */
     .large-card,
     .info-side {
-        width: 90%; 
-        max-width: 500px; 
-        height: auto; /* Removed fixed height */
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+        /* Removed fixed height */
     }
-    
+
     .info-card {
-        width: 100%; 
-        padding: 24px; 
+        width: 100%;
+        padding: 24px;
     }
-    
+
     .info-side {
-        align-items: stretch; 
+        align-items: stretch;
     }
+
     /* END MOBILE CARD FIXES */
 
     .form-container {
         flex-direction: column;
-        padding: 30px; 
+        padding: 30px;
     }
 
     .form-column {
@@ -430,7 +450,7 @@ textarea {
 
 /* Smallest Screen Optimization */
 @media (max-width: 500px) {
-    
+
     .contact-header,
     .contact-info,
     .contact-form {
@@ -444,28 +464,28 @@ textarea {
     }
 
     .info-card {
-        padding: 18px; 
+        padding: 18px;
     }
-    
+
     .icon-svg {
-        width: 40px; 
+        width: 40px;
         height: 40px;
     }
-    
+
     .icon-text-row {
         gap: 12px;
     }
-    
+
     .large-card .text-block h1,
     .large-card .text-block h2 {
         font-size: 18px;
     }
 
-    .large-card .text-block p { 
+    .large-card .text-block p {
         font-size: 14px;
     }
 
-    .small-card .text-block p { 
+    .small-card .text-block p {
         font-size: 13px;
     }
 }

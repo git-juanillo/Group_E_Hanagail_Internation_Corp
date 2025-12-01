@@ -111,40 +111,41 @@ nav li:first-child {
 
 /* HEADER */
 .Header-section {
-  background: url(../Images/Header_AU.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 450px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 0 50px;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    background: url(../Images/Header_AU.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 450px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
 }
 
 .Header-content {
-  margin-top: 80px;
-  color: white;
-  z-index: 10;
+    margin-top: 80px;
+    color: white;
+    z-index: 10;
 }
 
 .Header-content h1 {
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
 }
 
 .Header-content p {
-  font-size: 18px;
-  font-weight: 300;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 /* Company Overview */
 .company-overview {
     text-align: center;
-    padding: 120px 20px 140px;;
+    padding: 120px 20px 140px;
+    ;
     background: linear-gradient(180deg, #ffffff 0%, #e2f5ec 40%);
 }
 
@@ -252,13 +253,13 @@ nav li:first-child {
 
     .founder-img {
         margin-right: 0;
-        width: 80%;         
+        width: 80%;
         height: auto;
         max-width: 300px;
     }
 
     .founder-info p {
-        text-align: justify; 
+        text-align: justify;
     }
 }
 
@@ -302,7 +303,7 @@ nav li:first-child {
     color: #1a8f5b;
 }
 
-.mission-description strong{
+.mission-description strong {
     color: #1a8f5b;
 }
 
@@ -357,7 +358,8 @@ nav li:first-child {
     padding: 40px;
 }
 
-.why-choose h1, h4 {
+.why-choose h1,
+h4 {
     color: #1a8f5b;
 }
 
