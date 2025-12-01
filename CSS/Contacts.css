@@ -120,7 +120,7 @@ nav li:first-child {
 }
 
 .header-text {
-    width: 55%;
+    width: auto;
     margin-bottom: 10px;
 }
 
@@ -130,7 +130,7 @@ nav li:first-child {
 }
 
 .header-image img {
-    width: 420px;
+    width: auto;
     height: 300px;
     object-fit: cover;
     border-radius: 10px;
@@ -216,7 +216,7 @@ nav li:first-child {
 
 .large-card {
     width: auto;
-    height: 250px;
+    height:auto;
     margin-bottom: auto;
 }
 
