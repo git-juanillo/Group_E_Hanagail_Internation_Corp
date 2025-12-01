@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -120,7 +121,7 @@ nav li:first-child {
 }
 
 .header-text {
-    width: auto;
+    width: auto; /* Adjusted for better scaling */
     margin-bottom: 10px;
 }
 
@@ -140,6 +141,13 @@ nav li:first-child {
     .contact-header{
         grid-template-columns: repeat(2, 1fr);
     }
+    .header-text {
+        width: 55%; 
+    }
+    .header-image img {
+        width: 420px;
+        height: 300px;
+    }
 }
 
 /* CONTACT INFO CARDS */
@@ -148,9 +156,24 @@ nav li:first-child {
     justify-content: center;
     align-items: flex-start;
     gap: 40px;
-    padding: 60px 7%;
+    padding: 60px 10% 60px;
     flex-wrap: wrap;
 }
+
+/* DESKTOP CARD FIXES */
+.large-card {
+    width: 48%; 
+    height:auto;
+    margin-bottom: auto;
+}
+
+.info-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 48%; 
+}
+/* END OF DESKTOP CARD FIXES */
 
 .info-card {
     background: white;
@@ -160,7 +183,7 @@ nav li:first-child {
     display: flex;
     flex-direction: row;
     width: auto;
-    align-items: center;
+    align-items: flex-start; 
     justify-content: flex-start;
     transition: all 0.25s ease-in-out;
 }
@@ -184,8 +207,9 @@ nav li:first-child {
 
 .icon-text-row {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Ensures text starts at the top of the icon */
     gap: 18px;
+    width: 100%;
 }
 
 .icon-svg {
@@ -194,6 +218,7 @@ nav li:first-child {
     align-items: center;
     width: 60px;
     height: 60px;
+    flex-shrink: 0; /* Prevents icon from shrinking on mobile */
 }
 
 .icon-svg svg {
@@ -203,36 +228,38 @@ nav li:first-child {
     
 }
 
+/* Specific text block styling for better readability */
+.text-block {
+    flex-grow: 1; 
+    min-width: 0; 
+}
+
 .text-block h1,
 .text-block h2 {
-    margin-bottom: 8px;
-    font-weight: 600;
+    margin-bottom: 5px; 
+    font-weight: 700; 
+    font-size: 20px; 
 }
 
-.text-block p {
-    font-size: 15px;
-    line-height: 1.6;
+.large-card .text-block p { 
+    font-size: 16px; 
+    line-height: 1.4;
+    word-break: break-word; 
 }
 
-.large-card {
-    width: auto;
-    height:auto;
-    margin-bottom: auto;
+.small-card .text-block p { 
+    font-size: 14px; 
+    line-height: 1.4;
+    word-break: break-word;
 }
 
 .small-card {
     width: auto;
 }
 
-.info-side {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
 /* Quote Form */
 .contact-form {
-    padding: 40px 7% 80px;
+    padding: 40px 10% 80px;
     display: flex;
     justify-content: center;
 }
@@ -348,24 +375,99 @@ textarea {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 900px) {
+    /* HEADER FIXES */
     .contact-header {
         flex-direction: column;
         text-align: center;
+        align-items: center; /* Ensures content is centered */
     }
+    
+    .header-text {
+        text-align: center; 
+        margin-bottom: 20px; 
+    }
+
+    .header-image img {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+    }
+    /* END HEADER FIXES */
 
     .contact-info {
         flex-direction: column;
         align-items: center;
+        gap: 20px; 
     }
+
+    /* MOBILE CARD FIXES */
+    .large-card,
+    .info-side {
+        width: 90%; 
+        max-width: 500px; 
+        height: auto; /* Removed fixed height */
+    }
+    
+    .info-card {
+        width: 100%; 
+        padding: 24px; 
+    }
+    
+    .info-side {
+        align-items: stretch; 
+    }
+    /* END MOBILE CARD FIXES */
 
     .form-container {
         flex-direction: column;
+        padding: 30px; 
     }
 
     .form-column {
         width: 100%;
     }
+}
 
+/* Smallest Screen Optimization */
+@media (max-width: 500px) {
+    
+    .contact-header,
+    .contact-info,
+    .contact-form {
+        padding-left: 5%;
+        padding-right: auto;
+        width: auto;
+    }
+
+    .form-container {
+        padding-right: 55px;
+    }
+
+    .info-card {
+        padding: 18px; 
+    }
+    
+    .icon-svg {
+        width: 40px; 
+        height: 40px;
+    }
+    
+    .icon-text-row {
+        gap: 12px;
+    }
+    
+    .large-card .text-block h1,
+    .large-card .text-block h2 {
+        font-size: 18px;
+    }
+
+    .large-card .text-block p { 
+        font-size: 14px;
+    }
+
+    .small-card .text-block p { 
+        font-size: 13px;
+    }
 }
 
 
